@@ -1,0 +1,43 @@
+html{
+  height: 100%;
+}
+body{
+  background-color: red;
+  margin: 0;
+}
+.my-style{
+  background-color: white;
+}
+.title{
+  background-color: yellow;
+}
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+
+  border-width: 10px
+  border-color: red;
+  border-style: dotted;
+
+  margin: 50px;
+  padding: 20px;
+}
+.special-box{
+  background-color: pink;
+  position: fixed;
+  right:200px;
+  top:50px;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  padding: 20px;
+}
+.hidden-box{
+  background-color: red;
+  visibility: visible;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+  padding: 20px;
+}

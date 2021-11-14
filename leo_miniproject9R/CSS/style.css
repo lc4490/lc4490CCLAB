@@ -1,0 +1,20 @@
+body{
+  padding: 20px;
+}
+p{
+  font-family: cursive;
+  font-size: 1.5em;
+  color: red;
+
+}
+ol{
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 3em;
+  color: red;
+}
+.blue{
+  color: blue;
+}
+.green{
+  color: green;
+}
