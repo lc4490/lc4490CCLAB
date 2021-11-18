@@ -71,12 +71,12 @@ class LilDio {
     this.x += this.xSpd;
     this.y += this.ySpd;
     console.log(this.arrSize);
-    if (this.x > width+100 || this.x < 0) {
+    if (this.x > width || this.x < 0) {
       //arrX[i] = -150 * arrSize[i];
       //spdX[i]=random(1,25)
       this.xSpd = this.xSpd * -1;
     }
-    if (this.y > height+100 || this.y < 0) {
+    if (this.y > height || this.y < 0) {
       this.ySpd = this.ySpd * -1;
     }
   }
