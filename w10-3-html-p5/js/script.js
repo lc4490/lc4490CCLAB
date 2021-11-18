@@ -1,17 +1,33 @@
 let dios = [];
+let sliderSpd;
+let sliderSz;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  sliderSpd = document.getElementById("speed");
+  sliderSz = document.getElementById("size");
 }
 
 function mousePressed() {
-  x = mouseX;
-  y = mouseY;
-  spdX = random(-10, 10);
-  spdY = random(-10, 10);
-  size = random(0.5, 1.5);
-  temp = new LilDio(x, y, spdX, spdY, size);
-  dios.push(temp);
+  if(mouseY > 0 && mouseX > 0){
+    x = mouseX;
+    y = mouseY;
+    let spdRange = int(sliderSpd.value);
+    let szRange = int(sliderSz.value);
+    negX = random();
+    negY = random();
+    spdX = spdRange;
+    spdY = spdRange;
+    if(negX > 0.5){
+      spdX*=-1;
+    }
+    if(negY > 0.5){
+      spdY*=-1;
+    }
+    size = szRange/2;
+    temp = new LilDio(x, y, spdX, spdY, size);
+    dios.push(temp);
+}
 }
 
 function draw() {
@@ -25,9 +41,11 @@ function draw() {
   }
 }
 function keyPressed(){
+  if(key==" "){
   while(dios.length>0)
-{
+    {
   dios.splice(0,1)
+    }
 }
 }
 
@@ -52,12 +70,13 @@ class LilDio {
   move() {
     this.x += this.xSpd;
     this.y += this.ySpd;
-    if (this.x > width || this.x < 0) {
+    console.log(this.arrSize);
+    if (this.x > width+100 || this.x < 0) {
       //arrX[i] = -150 * arrSize[i];
       //spdX[i]=random(1,25)
       this.xSpd = this.xSpd * -1;
     }
-    if (this.y > height || this.y < 0) {
+    if (this.y > height+100 || this.y < 0) {
       this.ySpd = this.ySpd * -1;
     }
   }
