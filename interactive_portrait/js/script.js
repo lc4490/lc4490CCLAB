@@ -2,7 +2,7 @@ let cam;
 let r1, g1, b1;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(640, 480);
   cam = createCapture(VIDEO);
   cam.hide();
 }
