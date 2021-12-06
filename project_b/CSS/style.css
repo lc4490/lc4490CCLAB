@@ -1,0 +1,41 @@
+html{
+  height: 100%;
+  background-color: black;
+}
+.box{
+  position: absolute;
+  width: 100%;
+}
+.toptext{
+  width: 100%;
+  position: absolute;
+  color: white;
+  font-family: cursive;
+  font-size: 40px;
+  top: 25%;
+  text-align: center;
+}
+p{
+  font-color: black;
+}
+.startBox{
+  position:fixed;
+  text-align: center;
+  left: 50%;
+  top: 50%;
+}
+.buttonA{
+  background-color: transparent;
+  border: none;
+  position:relative;
+  width: 100px;
+  height: 100px;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

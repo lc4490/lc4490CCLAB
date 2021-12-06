@@ -20,7 +20,6 @@ function draw() {
       let b = cam.pixels[index + 2];
       let avg = (r + g + b) / 3;
       let dia = floor( map(avg, 0, 255, 0, 20) );
-
       fill(r,g,b);
       noStroke();
       ellipse(x, y, dia, dia);
